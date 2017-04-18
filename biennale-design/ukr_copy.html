@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>дизайн</title>
+    <!-- <script src="js/jquery.easing.1.3.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.jkit.custom.1.2.16.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/jkit.css"> -->
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <script src="https://use.fontawesome.com/84d2ba0d82.js"></script>
+</head>
+
+<body>
+    <div id="modal_search">
+        <span id="close"></span>
+        <div class="search_panel">
+            <div class="search_display">
+                <input type="text">
+                <span class="glass_search"></span>
+            </div>
+        </div>
+    </div>
+    <div id="main-modal" class="animated left_hidden">
+        <ul>
+            <li><a class="item_link" href="#">додому</a></li>
+            <li><a class="item_link" href="#">програми</a></li>
+            <li><a class="item_link" href="#">побачити якісь міста</a></li>
+            <li><a class="item_link" href="#">ціни</a></li>
+            <li><a class="item_link" href="#">концерти 2017</a></li>
+            <li><a class="item_link" href="#">партнери</a></li>
+        </ul>
+    </div>
+    <!-- </div> -->
+    <!-- <div class="content"> -->
+    <div class="menu_top_left ">
+        <a href="#" class="menu_switch">
+            <button class="hamburger hamburger--collapse" type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+               </button>
+            <span class="menu_lab">меню</span>
+        </a>
+    </div>
+    <!--  fixed blocks on the top corners -->
+    <!-- <div class="menu_top_right">
+        <a href="#" class="menu_switch">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+    </div> -->
+    <div class="menu_bot_left">
+        <a href="#" class="menu_switch"></a>
+    </div>
+    <!-- <div class="menu_bot_right">
+        <a href="#" class="menu_switch"></a>
+    </div> -->
+    <!-- <div class="nav_wrapper"> -->
+       <nav>
+           <ul>
+               <li><a href="">якийсь текст 1</a></li>
+               <li><a href="">якийсь текст 2</a></li>
+               <li><a href="">якийсь текст 3</a></li>
+               <li><a href="">якийсь текст 4</a></li>
+               <li><a href="">якийсь текст 5</a></li>
+               <li><a href="">якийсь текст 6</a></li>
+               <li><a href="">якийсь текст 7</a></li>
+           </ul>
+           <div class="switch_button"></div>
+       </nav>
+   <!-- </div> -->
+    <div class="content">
+        <header >
+            <div class="col s12 ">
+              <div class=" mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label">
+                  <label class="mdl-button mdl-js-button mdl-button--icon" for="search-expandable2">
+                    <i class="material-icons">search</i>
+                  </label>
+                  <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" id="search-expandable2">
+                    <label class="mdl-textfield__label" for="search-expandable2">
+                       введіть який небудь текст
+                    </label>
+                  </div>
+               </div>
+
+              <select id="change_lang" name="" >
+                 <!-- <option value="" selected></option> -->
+                 <option value="index.html">Eng</option>
+                 <option value="ukr_copy.html" selected="Ukr">Ukr</option>
+              </select>
+
+           </div>
+        </header>
+        <section>
+            <div class="top_img ">
+                <div class="img_inner parallax-container" id="prlx_container" data-jkit="[parallax:strength=4;axis=both]">
+                    <div class="parallax parallax1">this is some small text</div>
+                    <div class="parallax parallax2">and this is bigger one</div>
+                    <div class="parallax parallax3">this is the biggest</div>
+                    <img class="parallax parallax4" src="img/starofdavid.png" style="width:100px">
+                </div>
+            </div>
+        </section>
+        <div class="container">
+           <section>
+               <h2>це тайтл 1</h2>
+               <p> публіцистичний науковий чи загальнолітературний твір, що на підставі розгляду та зіставлення значної групи фактів чи ситуацій, ґрунтовно й глибоко, з науковою точністю трактує, осмислює й теоретично узагальнює проблеми соціальної дійсності. Стаття будується на розкритті та аналізі проблеми..</p>
+           </section>
+           <div class="divider"></div>
+           <table class="highlight">
+               <thead>
+                   <tr>
+                       <th data-field="id">ім'я</th>
+                       <th data-field="name">ітем номер</th>
+                       <th data-field="price">ітем ціна</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>Alvin</td>
+                       <td>Eclair</td>
+                       <td>$0.87</td>
+                   </tr>
+                   <tr>
+                       <td>Alan</td>
+                       <td>Jellybean</td>
+                       <td>$3.76</td>
+                   </tr>
+                   <tr>
+                       <td>Jonathan</td>
+                       <td>Lollipop</td>
+                       <td>$7.00</td>
+                   </tr>
+               </tbody>
+           </table>
+           <div class="divider"></div>
+           <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                  <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                  <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                  <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+           </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
