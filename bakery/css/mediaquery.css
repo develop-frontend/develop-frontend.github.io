@@ -188,6 +188,10 @@
       display: none;
    }
 
+   .middle_wrap .container{
+      overflow: hidden;
+   }
+
    .slider div.carousel{
       width: 354px !important;
    }
@@ -292,8 +296,13 @@
       width: 90px;
    }
 
+   .mill h3, .mill span, .mill p{
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+
    .carousel li{
-      width: 114px !important;
+      /*width: 114px !important;*/
    }
 
 }
