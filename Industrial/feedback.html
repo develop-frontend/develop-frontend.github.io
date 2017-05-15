@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feedback</title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/84d2ba0d82.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+</head>
+<body class="feedback">
+<div class="wrapper wrapper_white">
+    <div class="container">
+        <header>
+            <div class="row valign-wrapper">
+                <div class="col l4">
+                    <img src="img/logo.jpg" alt="logo">
+                    <div class="logo_part">
+                        <h2>Build Home</h2>
+                        <p>INDUSTRIAL THEME</p>
+                    </div>
+                </div>
+                <div class=" col l2 offset-l6 s4">
+                    <div class="socials">
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.rss.com/"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://www.skype.com/en/"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="nav-wrapper">
+                <!--<div class="row">-->
+                <div class="nav_hide_mobile">
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i
+                            class="material-icons">menu</i></a>
+                    <ul class="hide-on-med-and-down">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="features.html">FEATURES</a></li>
+                        <li><a href="service.html">SERVICES</a></li>
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="feedback.html">FEEDBACK</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="features.html">FEATURES</a></li>
+                        <li><a href="service.html">SERVICES</a></li>
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="feedback.html">FEEDBACK</a></li>
+                    </ul>
+                </div>
+                <!--<div class="right">-->
+                <div class="nav_search">
+                    <input id="nav_search" type="text" placeholder="Search...">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        </nav>
+
+    </div>
+</div>
+<div class="container form_wrapper">
+    <div class="row">
+        <form action="#" class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input  id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col l4 s12">
+                    <label for="date_form" class="active">Date from</label>
+                    <input id="date_form" type="text" class="datepicker picker__input" readonly="" tabindex="-1"
+                           aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="birthdate_root">
+                </div>
+                <div class="input-field col l4 s12">
+                    <label for="date_to" class="active">Date to</label>
+                    <input id="date_to" type="text" class="datepicker picker__input" readonly="" tabindex="-1"
+                           aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="birthdate_root">
+                </div>
+                <div class="file-field input-field col l4 s12">
+                    <div class="btn">
+                        <span>File</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col sm12">
+                    <p><input type="checkbox" id="test5"/><label for="test5">some question</label></p>
+                    <p><input type="checkbox" id="test4"/><label for="test4">some question</label></p>
+                    <p>
+                        <input class="with-gap" name="group1" type="radio" id="test3"/>
+                        <label for="test3">Male</label>
+                    </p>
+                    <p>
+                        <input class="with-gap" name="group1" type="radio" id="test2"/>
+                        <label for="test2">Female</label>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Textarea</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="right">
+                    <button class="btn waves-effect waves-light btn_action_submit" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row foo_links">
+            <div class="col l3 m3 s6">
+                <h4>SOCIALS</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://www.flickr.com/">Flickr</a></li>
+                    <li><a href="https://twitter.com/?lang=en">Twitter</a></li>
+                    <li><a href="https://vimeo.com/">Vimeo</a></li>
+                </ul>
+            </div>
+            <div class="col l3 m3 s6">
+                <h4>LINKS</h4>
+                <ul>
+                    <li><a href="">How to Write a Blog</a></li>
+                    <li><a href="">Create a Blog in 4 Steps</a></li>
+                    <li><a href="">15 Tips to Increase Traffic</a></li>
+                    <li><a href="">20 Blog Post Ideas</a></li>
+                </ul>
+            </div>
+            <div class="col l3 m3 s6">
+                <h4>BLOGROLL</h4>
+                <ul>
+                    <li><a href="">Blogs Blog</a></li>
+                    <li><a href="">Roll Up Roll Up</a></li>
+                    <li><a href="">Blog Free</a></li>
+                    <li><a href="">Wordpress Blog</a></li>
+                </ul>
+            </div>
+            <div class="col l3 m3 s6">
+                <h4>ABOUT US</h4>
+                <ul>
+                    <li><a href="">Agriculture</a></li>
+                    <li><a href="">Harvest</a></li>
+                    <li><a href="">Company News</a></li>
+                    <li><a href="">Investor relations</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foo_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col xl5 l6">
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>BuildHomeLtd.  Street Name 123   23 45 Cityname</span>
+                </div>
+                <div class="col xl5 l6">
+                    <a href=""><i class="fa fa-mobile" aria-hidden="true"></i>123 456 789</a>
+                    <a href=""><i class="fa fa-address-card" aria-hidden="true"></i>info@buildhome.web</a>
+                </div>
+                <div class=" col xl2 l12">
+                    &#169; 2014 Build Home
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
