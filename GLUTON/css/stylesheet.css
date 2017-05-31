@@ -1,0 +1,90 @@
+
+
+@font-face {
+    font-family: 'sf_ui_bold';
+    src: url('../fonts/sfdisplay-bold-webfont.woff') format('woff'),
+         url('../fonts/sfdisplay-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'sf_ui_medium';
+    src: url('../fonts/sfdisplay-medium-webfont.woff') format('woff'),
+         url('../fonts/sfdisplay-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'sf_ui_regular';
+    src: url('../fonts/sfdisplay-regular-webfont.woff') format('woff'),
+         url('../fonts/sfdisplay-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'sf_ui_semibold';
+    src: url('../fonts/sfdisplay-semibold-webfont.woff') format('woff'),
+         url('../fonts/sfdisplay-semibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('../fonts/montserrat-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'montserratmedium';
+    src: url('../fonts/montserrat-medium-webfont.woff') format('woff'),
+         url('../fonts/montserrat-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('montserrat-light-webfont.woff') format('woff'),
+         url('montserrat-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'montserratsemibold';
+    src: url('../fonts/montserrat-semibold-webfont.woff') format('woff'),
+         url('../fonts/montserrat-semibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'geometry_soft_probold_n';
+    src: url('../fonts/geometry_soft_pro-bold_n-webfont.woff') format('woff'),
+         url('../fonts/geometry_soft_pro-bold_n-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

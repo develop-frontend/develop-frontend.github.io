@@ -1,0 +1,80 @@
+.fixed-action-btn {
+    position: relative;
+    bottom: 0px;
+}
+
+.btn-floating i.fa-bars {
+    color: #000;
+}
+
+.fixed-action-btn.horizontal ul {
+    top: 38%;
+}
+
+
+.is-page {
+    background-image: url("../img/main_top_back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.is-page .img_holder_logo h3{
+   text-align: left;
+}
+
+.is-page .foot .img_holder_logo h3{
+   text-align: center;
+}
+
+.is-page .top_head {
+    min-height: 220px !important;
+    background-image: none;
+    margin-bottom: 180px;
+}
+
+.middle-block {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.boys {
+    margin-top: 350px;
+}
+
+.about_food{
+   position: relative;
+}
+
+.vert_copyright{
+   position: absolute;
+   bottom: -40px;
+    right: -225px;
+    transform: rotate(-90deg);
+    color: #fff;
+}
+
+.item {
+    color: white;
+    font-size: 58px;
+}
+
+.foot_img {
+    background-image: url("../img/botton_back.png");
+    height: 50%;
+    width: 100%;
+    background-size: cover;
+    min-height: 500px;
+}
+
+.ios_top_back {
+    background-image: url("../img/back_img_top.png");
+    height: 50%;
+    width: 100%;
+    background-size: cover;
+    min-height: 470px;
+
+}
+
+.iphone {
+    border-radius: 50px;
+}
