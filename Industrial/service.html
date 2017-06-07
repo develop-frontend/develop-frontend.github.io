@@ -10,16 +10,20 @@
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_QRr3mfJc6Ok7mRdK2fo4GFUIM8dClZo">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script src="https://use.fontawesome.com/84d2ba0d82.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/script.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
 </head>
-<body class="service">
+<body class="service" >
 <div class="wrapper wrapper_white">
     <div class="container">
         <header>
@@ -37,7 +41,7 @@
                         <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         <a href="https://www.rss.com/"><i class="fa fa-rss" aria-hidden="true"></i></a>
                         <a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        <a href="https://www.skype.com/en/"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                        <a href="https://www.skype.com/en/" ><i class="fa fa-skype" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -46,22 +50,22 @@
         <nav>
             <div class="nav-wrapper">
                 <!--<div class="row">-->
-                <div class="nav_hide_mobile">
+                <div class="nav_hide_mobile" data-page="services">
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i
                             class="material-icons">menu</i></a>
                     <ul class="hide-on-med-and-down">
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="features.html">FEATURES</a></li>
-                        <li><a href="service.html">SERVICES</a></li>
-                        <li><a href="news.html">NEWS</a></li>
-                        <li><a href="feedback.html">FEEDBACK</a></li>
+                        <li><a href="index.html" class="nav-home">HOME</a></li>
+                        <li><a href="features.html" class="nav-features">FEATURES</a></li>
+                        <li><a href="service.html" class="nav-services">SERVICES</a></li>
+                        <li><a href="news.html" class="nav-news">NEWS</a></li>
+                        <li><a href="feedback.html" class="nav-feedback">FEEDBACK</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="features.html">FEATURES</a></li>
-                        <li><a href="service.html">SERVICES</a></li>
-                        <li><a href="news.html">NEWS</a></li>
-                        <li><a href="feedback.html">FEEDBACK</a></li>
+                        <li><a href="index.html" class="nav-home">HOME</a></li>
+                        <li><a href="features.html" class="nav-features">FEATURES</a></li>
+                        <li><a href="service.html" class="nav-services">SERVICES</a></li>
+                        <li><a href="news.html" class="nav-news">NEWS</a></li>
+                        <li><a href="feedback.html" class="nav-feedback">FEEDBACK</a></li>
                     </ul>
                 </div>
                 <!--<div class="right">-->
@@ -87,24 +91,44 @@
             </ul>
         </div>
         <div id="test1" class="col s12">
-            <h4 >service title 1</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores at, eaque ex fugit inventore suscipit. Asperiores, debitis doloremque eligendi fuga iure odit quas qui, quos suscipit,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores at, eaque ex fugit inventore suscipit. Asperiores, debitis doloremque eligendi fuga iure odit quas qui, quos suscipit, unde vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium aperiam doloribus earum eligendi fugiat ipsam magnam non nostrum praesentium quisquam quo ratione suscipit temporibus unde vel veniam vitae voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci beatae consectetur doloremque eligendi, excepturi hic laboriosam magnam necessitatibus obcaecati perferendis quibusdam repellendus similique, tenetur ullam! Harum quas quo recusandae? </p>
+            <h4>service title 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores at, eaque ex fugit
+                inventore suscipit. Asperiores, debitis doloremque eligendi fuga iure odit quas qui, quos suscipit,Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores at, eaque ex fugit inventore
+                suscipit. Asperiores, debitis doloremque eligendi fuga iure odit quas qui, quos suscipit, unde vel.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium aperiam doloribus earum
+                eligendi fugiat ipsam magnam non nostrum praesentium quisquam quo ratione suscipit temporibus unde vel
+                veniam vitae voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci beatae
+                consectetur doloremque eligendi, excepturi hic laboriosam magnam necessitatibus obcaecati perferendis
+                quibusdam repellendus similique, tenetur ullam! Harum quas quo recusandae? </p>
         </div>
         <div id="test2" class="col s12">
-            <h4 >service title 2</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisic. Asperiores, debitis doloremque eligendi fuga iure odit quas qui, quos suscipit, unde vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad amet aspernatur cupiditate debitis distinctio dolorum eius, enim id inventore ipsam maxime quo ratione rerum, sit temporibus, ut vero voluptas? </p>
+            <h4>service title 2</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisic. Asperiores, debitis doloremque eligendi fuga iure odit
+                quas qui, quos suscipit, unde vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+                ad amet aspernatur cupiditate debitis distinctio dolorum eius, enim id inventore ipsam maxime quo
+                ratione rerum, sit temporibus, ut vero voluptas? </p>
         </div>
         <div id="test3" class="col s12">
-            <h4 >service title 3</h4>
+            <h4>service title 3</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
         </div>
         <div id="test4" class="col s12">
-            <h4 >service title 4</h4>
+            <h4>service title 4</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
     </div>
 </div>
-
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="goo_map">
+                <h3>My Google Maps Manufacturing Place</h3>
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+</div>
 <footer>
     <div class="container">
         <div class="row foo_links">
@@ -149,20 +173,29 @@
     <div class="foo_bottom">
         <div class="container">
             <div class="row">
-                <div class="col xl5 l6">
+                <div class="col xl5 l6 s12">
                     <span><i class="fa fa-map-marker" aria-hidden="true"></i>BuildHomeLtd.  Street Name 123   23 45 Cityname</span>
                 </div>
-                <div class="col xl5 l6">
+                <div class="col xl5 l6 s12">
                     <a href=""><i class="fa fa-mobile" aria-hidden="true"></i>123 456 789</a>
                     <a href=""><i class="fa fa-address-card" aria-hidden="true"></i>info@buildhome.web</a>
                 </div>
-                <div class=" col xl2 l12">
+                <div class=" col xl2 l12 s12">
                     &#169; 2014 Build Home
                 </div>
             </div>
         </div>
     </div>
 </footer>
+<!--<script>-->
+    <!--var map;-->
+    <!--function initMap() {-->
+        <!--map = new google.maps.Map(document.getElementById('map'), {-->
+            <!--center: {lat: -34.397, lng: 150.644},-->
+            <!--zoom: 8-->
+        <!--});-->
+    <!--}-->
+<!--</script>-->
 
 </body>
 </html>
