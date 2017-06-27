@@ -250,7 +250,7 @@
         </div>
     </div>
 </div>
-<div class="divider"></div>
+<div class="divider bottom-divider"></div>
 <div class="container">
     <footer class="">
         <span class="main_word">URLAUBSGLÜCK</span>
@@ -274,16 +274,23 @@
 
 <script type="text/template" id="list-template">
     <div class="block_tmpl">
-        <span class="title"><% title %></span>
+        <h1><%= htmlData.title %></h1>
+        <ul>
+            <% for(var i = 0; i < htmlData.items.length; i ++){ %>
+                <li><%= htmlData.items[i] %></li>
+            <% }  %>
+        </ul>
+
     </div>
 </script>
 
-<script src="js/zepto.min.js"></script>
-<script src="js/flickity.min.js"></script>
-<script src="js/lodash.js"></script>
-<script src="js/imagesloaded.pkgd.js"></script>
-<script src="js/masonry.pkgd.js"></script>
-<script src="js/script.js"></script>
+<!--<script src="js/zepto.min.js"></script>-->
+<!--<script src="js/flickity.min.js"></script>-->
+<!--<script src="js/lodash.js"></script>-->
+<!--<script src="js/imagesloaded.pkgd.js"></script>-->
+<!--<script src="js/masonry.pkgd.js"></script>-->
+<!--<script src="js/script.js"></script>-->
+<script src="js/main.js"></script>
 </body>
 
 </html>
