@@ -78,6 +78,7 @@
 
 .fa-caret-right, .fa-caret-left{
   width: 1.375em!important;
+  height: 1.4em;
 }
 
 .week{margin: 10px 0 20px;}
@@ -93,6 +94,7 @@
 #calendar2 thead tr:last-child {
   font-size: small;
   color: rgb(85, 85, 85);
+  height: 75px;
 }
 
 #calendar2 thead tr:nth-child(1) td:nth-child(2) {
@@ -100,8 +102,8 @@
   font-size: 18px;
   color: #10bda9;
   letter-spacing: 2px;
-  /* position: relative;
-  top: -20px; */
+  position: relative;
+  top: -4px;
 }
 
 #calendar2 thead tr:nth-child(1) td:nth-child(1):hover,
@@ -142,7 +144,8 @@
     z-index: 2;
 }
 
-.empty_cell, .empty>td{
+td:empty{
   border: transparent!important;
   background-color: #fff!important;
 }
+
