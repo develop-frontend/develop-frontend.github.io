@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/media-query.css">
+</head>
+<body class="settings">
+
+    <div class="main">
+        <nav>
+                <div class="nav__header">
+                    <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                </div>
+                <div class="nav__user">
+                    <div>
+                        <span>Владелец Системы</span>
+                        <span>Владелец </span>
+                    </div>
+                    <div class="nav__avatar"><img src="img/user.jpg" alt="user"></div>
+                    <div class="nav__site">
+                        <a href="">
+                            <i class="fas fa-external-link-alt"></i>
+                            Сайт
+                        </a>
+                        <a href="">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Выйти
+                        </a>
+                    </div>
+                </div>
+                <ul class="nav__menu hide-on-small">
+                    <li><a href="settings.html"><i class="fas fa-cog"></i>настройки</a></li>
+                    <li><a href="groups.html"><i class="fas fa-folder"></i>группы</a></li>
+                    <li><a href="users.html"><i class="fas fa-user"></i>пользователи</a></li>
+                    <li><a href="service.html"><i class="fas fa-server"></i>услуги</a></li>
+                    <li><a href="bills.html"><i class="far fa-credit-card"></i>счета</a></li>
+                    <li><a href="site.html"><i class="fas fa-external-link-alt"></i>сайт</a></li>
+                </ul>
+                <button type="button" class="show-on-small navbar-toggle">
+                    <!-- <span class="sr-only">Toggle navigation</span> -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <ul class="nav__menu hide-on-med">
+                    <li><a href=""><i class="fas fa-cog"></i>настройки</a></li>
+                    <li><a href=""><i class="fas fa-folder"></i>группы</a></li>
+                    <li><a href=""><i class="fas fa-user"></i>пользователи</a></li>
+                    <li><a href=""><i class="fas fa-server"></i>услуги</a></li>
+                    <li><a href=""><i class="far fa-credit-card"></i>счета</a></li>
+                    <li><a href=""><i class="fas fa-external-link-alt"></i>сайт</a></li>
+                </ul>
+        </nav>
+       
+        <aside>
+           <ul>
+               <li><a href=""><i class="fas fa-cog"></i> Основные</a></li>
+               <li><a href=""><i class="fas fa-lock"></i> Привелегии</a></li>
+               <li><a href=""><i class="fas fa-comment"></i>SMS конфиг</a></li>
+               <li><a href=""><i class="far fa-list-alt"></i> SMS формы</a></li>
+               <li><a href=""><i class="fab fa-font-awesome-flag"></i> Языки</a></li>
+           </ul>
+        </aside>
+        <section>
+            <form action="">
+                <div class="panel">
+                    <div class="panel-heading">Настройки</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="">Адресс админ панели</label>
+                            <div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">clinic.idev.site/</span>
+                                    <input class="form-control" type="text" placeholder="Адрес админ панели">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Языки</label>
+                            <div>
+                                <div class="btn-group">
+                                    <button title="Русский, English, Українська">
+                                        <span class="filter-option">Русский, English, Українська</span>
+                                        <span><span></span>
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <ul class="dropdown-menu inner">
+                                            <li><a href=""><span>Русский</span><span></span></a></li>
+                                            <li><a href=""><span>English</span><span></span></a></li>
+                                            <li><a href=""><span>Українська</span><span></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Язык сайта по умолчанию</label>
+                            <div>
+                                <div class="btn-group">
+                                    <button><span>Русский</span><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <ul class="dropdown-menu inner">
+                                            <li><a href=""><span>Русский</span><span></span></a></li>
+                                            <li><a href=""><span>English</span><span></span></a></li>
+                                            <li><a href=""><span>Українська</span><span></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Часовой пояс</label>
+                            <div>
+                                <div class="btn-group">
+                                    <button><span>по Москве(GMT + 03: 00) Москва</span><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <ul class="dropdown-menu inner">
+                                            <li><a href=""><span>Русский</span><span></span></a></li>
+                                            <li><a href=""><span>English</span><span></span></a></li>
+                                            <li><a href=""><span>Українська</span><span></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Валюта</label>
+                            <div>
+                                <input type="text" class="form-control" value="RUB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading">SEO</div>
+                    <div class="panel-body">
+                        <ul class="nav-tabs">
+                            <li class="active"><a href="">Русский</a></li>
+                            <li><a href="">English</a></li>
+                            <li><a href="">Українська</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane" id="ru">
+                                <div class="form-group">
+                                    <label for="">Название</label>
+                                    <div>
+                                        <input class="form-control" type="text" placeholder="Название">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Описание</label>
+                                    <div>
+                                        <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Описание"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Ключевые слова</label>
+                                    <div>
+                                        <input class="form-control" type="text" placeholder="Ключевые слова">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="en" style="display:none;">
+                                <div class="form-group">
+                                    <label for="">Название</label>
+                                    <div>
+                                        <input class="form-control" type="text" placeholder="Название">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Описание</label>
+                                    <div>
+                                        <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Описание"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Ключевые слова</label>
+                                    <div>
+                                        <input class="form-control" type="text" placeholder="Ключевые слова">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="ukr" style="display:none;">
+                                <div class="form-group">
+                                    <label for="">Название</label>
+                                    <div>
+                                        <input class="form-control" type="text" placeholder="Название">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Описание</label>
+                                    <div>
+                                        <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Описание"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Ключевые слова</label>
+                                    <div>
+                                        <span>Ключові</span>
+                                        <span>слова</span>
+                                        <span>укр</span>
+                                        <input class="form-control" type="text" placeholder="Ключевые слова">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading">Оптимизация</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="">Время жизни cookie, в днях</label>
+                            <div><input class="form-control" type="number" placeholder="Время жизни cookie, в днях"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Время онлайна, в секундах</label>
+                            <div><input class="form-control" type="number" placeholder="Время онлайна, в секундах"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Ключ шифрования</label>
+                            <div><input class="form-control" type="text"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading">Контакты</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="">vk</label>
+                            <div><input class="form-control" type="text" placeholder="vk" value="https://vk.com/"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">facebook</label>
+                            <div><input class="form-control" type="text" placeholder="facebook" value="https://www.facebook.com/"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">google</label>
+                            <div><input class="form-control" type="text" placeholder="google" value="https://google.com/"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">instagram</label>
+                            <div><input class="form-control" type="text" placeholder="instagram" value="https://www.instagram.com/"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <div><input class="form-control" type="text" placeholder="Email" value="info@avamax.ru"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Телефон</label>
+                            <div><input class="form-control" type="text" placeholder="Телефон" value="+7 499 133-07-35"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Факс</label>
+                            <div><input class="form-control" type="text" placeholder="Факс" value="+7 499 133-07-35"></div>
+                        </div>
+                        <ul class="nav-tabs">
+                            <li><a href="">Русский</a></li>
+                            <li class="active"><a href="">English</a></li>
+                            <li><a href="">Українська</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane">
+                                <div class="form-group">
+                                    <label for="">Адрес</label>
+                                    <div><input class="form-control" type="text" placeholder="Адрес"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane">
+                                <div class="form-group">
+                                    <label for="">Address</label>
+                                    <div><input class="form-control" type="text" placeholder="Address"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane">
+                                <div class="form-group">
+                                    <label for="">Адрес</label>
+                                    <div><input class="form-control" type="text" placeholder="Адрес"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Отображение на карте</label>
+                            <div>
+                                <input class="form-control" type="text" placeholder="Search Box">
+                                <div id="map"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Выключить сайт
+                                <span>
+                                    Перевести сайт в состояние offline, для проведения технических работ
+                                </span>
+                            </label>
+                            <div><input class="form-control" type="text"><label for=""></label></div>
+                        </div>
+                        <ul class="nav-tabs" style="display:none;">
+                            <li><a href="">Русский</a></li>
+                            <li><a href="">English</a></li>
+                            <li><a href="">Українська</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane">
+                                <div class="form-group">
+                                    <label>Причина отключения сайта
+                                        <span>Сообщение для отображения в режиме отключенного сайта</span>
+                                    </label>
+                                    <div><textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Причина отключения сайта">
+                                        Сайт находится на текущей реконструкции, после завершения всех работ сайт будет открыт.
+                                        Приносим вам свои извинения за доставленные неудобства.
+                                    </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane">
+                                <div class="form-group">
+                                    <label>Причина отключения сайта
+                                        <span>Сообщение для отображения в режиме отключенного сайта</span>
+                                    </label>
+                                    <div><textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Причина отключения сайта">
+                                        The site is on the current reconstruction, after the completion of all the works site is opened.
+                                        We apologize for the inconvenience.
+                                    </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane">
+                                <div class="form-group">
+                                    <label>Причина отключения сайта
+                                        <span>Сообщение для отображения в режиме отключенного сайта</span>
+                                    </label>
+                                    <div><textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Причина   отключения сайта">Сайт знаходиться на поточній реконструкції, після завершення всіх робіт сайт буде відкритий.
+                                    Приносимо вам свої вибачення за доставлені незручності.
+                                    </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Лого</label>
+                            <div class="img-group">
+                                <figure></figure>
+                                <div class="dragndrop">
+                                    <span></span>
+                                    <input type="file">  Нажмите сюда или перетащите фото
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="form-group"><button class="btn btn-success" type="submit">Сохранить</button></div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    
+</body>
+</html>
