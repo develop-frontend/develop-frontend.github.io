@@ -149,3 +149,6 @@ td:empty{
   background-color: #fff!important;
 }
 
+#calendar2 tbody td.active{
+  background: #dafbf4;
+}
