@@ -9,17 +9,6 @@ $(document).ready(function (){
     
     $(".c-day-week").text(thisDay);
     $(".c-full-date").text(thisDate);
-    
-    $('.cal_days td').on('click', function(){
-        var cell = $(this).text();
-        if(cell.length === 0){
-            return;
-        }else{
-            $(this).toggleClass('active');
-        }
-    });
-
-    
 
     var $menu = $('.nav__menu.hide-on-med'); 
     $('.navbar-toggle').on('click', function(){
