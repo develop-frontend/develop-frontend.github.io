@@ -112,15 +112,14 @@
                     <tbody id="search">
                         <tr>
                             <td data-label="ID">1</td>
-                            <td data-label="title"><a href="">Регистрация права собственности</a></td>
+                            <td data-label="title"><a href="">title</a></td>
                             <td class="ta_r" data-label="Action:"><a href=""><i class="material-icons">mode_edit</i></a>
                                 <input type="checkbox" name="del[]" value="">
                             </td>
                         </tr>
                         <tr>
                             <td data-label="ID">3</td>
-                            <td data-label="title"><a href="">Оформление объектов самовольного и нового      строительства</a><a></a>
-                            </td>
+                            <td data-label="title"><a href="">title</a></td>
                             <td class="ta_r" data-label="Action:">
                                 <a href=""><i class="material-icons">mode_edit</i></a>
                                 <input type="checkbox" name="del[]" value="">
@@ -128,7 +127,7 @@
                         </tr>
                         <tr>
                             <td data-label="ID">5</td>
-                            <td data-label="title"><a href="">Оформление разрешения на строительство</a></td>
+                            <td data-label="title"><a href="">title</a></td>
                             <td class="ta_r" data-label="Action:">
                                 <a href=""><i class="material-icons">mode_edit</i></a>
                                 <input type="checkbox" name="del[]" value="">
@@ -141,16 +140,16 @@
             <!-- ADD SERVICE -->
             <section>
                 <div class="tabs">
-                    <ul class="nav-tabs" data-id="service">
-                        <li class="" data-tab="sseo-ru">ru</li>
-                        <li data-tab="sseo-uk" class="active ">uk</li>
+                    <ul class="nav-tabs" data-id="service" onclick="tab(event)">
+                        <li class="" data-tab="service-ru">ru</li>
+                        <li data-tab="service-uk" class="active ">uk</li>
                     </ul>
                 </div>
                 <header>
                     <h1 class="flx-just-center">ДОБАВИТЬ УСЛУГУ</h1>
                 </header>
                 <div class="tab-holder">
-                    <div id="sseo-ru" class="tabcontent active" data-id="service">
+                    <div id="service-ru" class="tabcontent active" data-id="service">
                         <div class="from-group">
                             <label>Название услуги</label>
                             <input type="text" name="" placeholder="Название услуги" value="" required="">
@@ -173,10 +172,10 @@
                         </div>
                     </div>
 
-                    <div id="sseo-uk" class="tabcontent" data-id="service" style="display:none;">
+                    <div id="service-uk" class="tabcontent" data-id="service">
                         <div class="from-group">
-                            <label>Название услуги</label>
-                            <input type="text" name="" placeholder="Название услуги" value="">
+                            <label>назва послуги</label>
+                            <input type="text" name="" placeholder="назва послуги" value="">
                         </div>
                         <div class="from-group">
                             <label>Заголовок</label>
@@ -187,12 +186,12 @@
                             <textarea type="text" name="" placeholder="descr"></textarea>
                         </div>
                         <div class="from-group">
-                            <label>Ценовая политика по Киеву</label>
-                            <input type="text" name="" placeholder="Ценовая политика по Киеву" value="">
+                            <label>Цінова політика по Києву</label>
+                            <input type="text" name="" placeholder="Цінова політика по Києву" value="">
                         </div>
                         <div class="from-group">
-                            <label>Ценовая политика по Области</label>
-                            <input type="text" name="" placeholder="Ценовая политика по Области" value="">
+                            <label>Цінова політика по Києву</label>
+                            <input type="text" name="" placeholder="Цінова політика по Києву" value="">
                         </div>
                     </div>
                 </div>
@@ -201,7 +200,7 @@
                 <div class="from-group">
                     <label>Url</label>
                     <div class="pseudo--input">
-                        <span>https://dozwil.gdr.one/</span>
+                        <span>https://your.url/</span>
                         <input type="text" name="url" placeholder="url" value="">
                     </div>
                 </div>
@@ -238,8 +237,8 @@
                             <td data-label="Photo">
                                 <img src="https://placeimg.com/80/80/any" width="80" height="80" style="border-radius: 100%;">
                             </td>
-                            <td data-label="Title"><a href="">Архитектор</a></td>
-                            <td data-label="Type">Сертификат</td>
+                            <td data-label="Title"><a href="">Title </a></td>
+                            <td data-label="Type">Type</td>
                             <td class="ta_r" data-label="Action:"><i class="material-icons">mode_edit</i><input type="checkbox" name="del[]" value=""></td>
                         </tr>
                         <tr id="slider_2">
@@ -247,8 +246,8 @@
                             <td data-label="Photo">
                                 <img src="https://placeimg.com/80/80/any" width="80" height="80" style="border-radius: 100%;">
                             </td>
-                            <td data-label="Title"><a href="">Инженер по технической инвентаризации</a></td>
-                            <td data-label="Type">Сертификат</td>
+                            <td data-label="Title"><a href="">Title</a></td>
+                            <td data-label="Type">Type</td>
                             <td class="ta_r" data-label="Action:"><i class="material-icons">mode_edit</i><input type="checkbox" name="del[]" value=""></td>
                         </tr>
                     </tbody>
@@ -257,22 +256,22 @@
             <!-- ADD SLIDER -->
             <section>
                 <div class="tabs">
-                    <ul class="nav-tabs" data-id="service">
-                        <li class="" data-tab="sseo-ru">ru</li>
-                        <li data-tab="sseo-uk" class="active ">uk</li>
+                    <ul class="nav-tabs" data-id="service" onclick="tab(event)">
+                        <li class="" data-tab="service-ru">ru</li>
+                        <li data-tab="service-uk" class="active">uk</li>
                     </ul>
                 </div>
                 <header>
                     <h1 class="flx-just-center">ДОБАВИТЬ УСЛУГУ</h1>
                 </header>
                 <div class="tab-holder">
-                    <div id="sseo-ru" class="tabcontent active" data-id="service">
+                    <div id="service-ru" class="tabcontent active" data-id="service">
                         <div class="from-group">
                             <label>Название </label>
                             <input type="text" name="" placeholder="Слайдеры" value="" required="">
                         </div>
                         <div class="from-group">
-                            <label>Команда</label>
+                            <label>photo</label>
                             <div class="img-group">
                                 <div class="dragndrop">
                                     <i class="material-icons">cloud_upload</i> Нажмите сюда или перетащите изображение
@@ -282,7 +281,27 @@
                         <div class="from-group">
                             <label>Тип</label>
                             <select class="form-control" name="type" required="">
-                				<option value="photo">Команда</option><option value="contacts">Контакты</option><option value="certificate">Сертификат</option>
+                				<option value="photo">photo</option><option value="">Контакты</option><option value="">type</option>
+                			</select>
+                        </div>
+                    </div>
+                    <div id="service-uk" class="tabcontent" data-id="service">
+                        <div class="from-group">
+                            <label>назва </label>
+                            <input type="text" name="" placeholder="Слайдеры" value="" required="">
+                        </div>
+                        <div class="from-group">
+                            <label>photo</label>
+                            <div class="img-group">
+                                <div class="dragndrop">
+                                    <i class="material-icons">cloud_upload</i> Натисніть сюди та виділіть зображення
+                                </div>
+                            </div>
+                        </div>
+                        <div class="from-group">
+                            <label>Тип</label>
+                            <select class="form-control" name="type" required="">
+                				<option value="photo">photo</option><option value="">Контакти</option><option value="">type</option>
                 			</select>
                         </div>
                     </div>
