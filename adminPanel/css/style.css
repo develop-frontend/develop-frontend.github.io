@@ -560,6 +560,7 @@ table tbody tr>td:first-child, table thead tr>th:first-child {
     display: inline-flex;
     height: 100%;
     align-items: center;
+        padding-right: 5px;
 }
 
 .ta_r> a:last-child{
@@ -829,6 +830,7 @@ table tbody tr:hover{
 
     .menu{
         display: block;
+        height: 21px;
     }
 
     .logo{
@@ -838,6 +840,31 @@ table tbody tr:hover{
 }
 
 @media (max-width:600px) {
+
+    main {
+        padding: 0 10px 40px 10px;
+    }
+
+    .from-group > input, textarea{
+        width: 100%;
+        min-width: 0;
+    }
+
+    .mainhead{
+        padding: 0 10px;
+    }
+
+    .hideModal{
+        width: 200px;
+        left: -45px;
+        font-size: 11px;
+    }
+
+    .hideModal .btn {
+        font-size: 10px;
+        width: 100%;
+        margin: 10px 0;
+    }
 
     table tbody tr:hover {
         background-color: transparent;
@@ -857,15 +884,29 @@ table tbody tr:hover{
         border-bottom: 2px solid #ddd;
     }
 
-    table td {
-        /* box-sizing: border-box; */
-        display: block;
+    table td img{
+        height: 40px;
+        width: 40px;
+    }
+
+    table tr td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         float: left;
         clear: left;
         width: 100%;
-        text-align: right;
+        text-align: right!important;
         font-size: 13px;
         border-bottom: 1px dotted #ccc;
+        padding: 0 0;
+    }
+
+    table tbody tr>td:first-child, table thead tr>th:first-child {
+        width: 100%;
+    }
+
+    table tbody tr > td:last-child, table thead tr>th:last-child {
         padding: 15px 0;
     }
 
@@ -880,6 +921,22 @@ table tbody tr:hover{
         content: "";
         display: table;
         clear: both;
+    }
+
+    td[data-label='Action:'] {
+        display: flex;
+        align-items: center;
+    justify-content: space-between;
+        border-bottom: 0;
+    }
+
+    table td input[type='checkbox']{
+        margin: 0;
+    }
+
+    td[data-label='Action:']::before{
+        content: '';
+        display: none;
     }
 
 }

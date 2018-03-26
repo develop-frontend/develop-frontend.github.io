@@ -99,7 +99,7 @@
             		</h1>
                 </header>
                 <div class="search">
-                    <input type="search" placeholder="⌕ поиск" onkeyup="Search($(this).val());">
+                    <input type="search" placeholder="⌕ поиск">
                 </div>
                 <table>
                     <thead>
@@ -112,9 +112,9 @@
                     <tbody id="search">
                         <tr>
                             <td data-label="ID">1</td>
-                            <td data-label="title"><a href="">Регистрация права собственности</a><a></a></td>
-                            <td class="ta_r"><a href=""><i class="material-icons">mode_edit</i></a>
-                                <a><input type="checkbox" name="del[]" value=""></a>
+                            <td data-label="title"><a href="">Регистрация права собственности</a></td>
+                            <td class="ta_r" data-label="Action:"><a href=""><i class="material-icons">mode_edit</i></a>
+                                <input type="checkbox" name="del[]" value="">
                             </td>
                         </tr>
                         <tr>
@@ -123,15 +123,15 @@
                             </td>
                             <td class="ta_r" data-label="Action:">
                                 <a href=""><i class="material-icons">mode_edit</i></a>
-                                <a><input type="checkbox" name="del[]" value=""></a>
+                                <input type="checkbox" name="del[]" value="">
                             </td>
                         </tr>
                         <tr>
                             <td data-label="ID">5</td>
-                            <td data-label="title"><a href="">Оформление разрешения на строительство</a><a></a></td>
+                            <td data-label="title"><a href="">Оформление разрешения на строительство</a></td>
                             <td class="ta_r" data-label="Action:">
                                 <a href=""><i class="material-icons">mode_edit</i></a>
-                                <a><input type="checkbox" name="del[]" value=""></a>
+                                <input type="checkbox" name="del[]" value="">
                             </td>
                         </tr>
                     </tbody>
@@ -238,18 +238,18 @@
                             <td data-label="Photo">
                                 <img src="https://placeimg.com/80/80/any" width="80" height="80" style="border-radius: 100%;">
                             </td>
-                            <td data-label="Title"><a href="">Архитектор</a><a></a></td>
+                            <td data-label="Title"><a href="">Архитектор</a></td>
                             <td data-label="Type">Сертификат</td>
-                            <td class="ta_r" data-label="Action:"><input type="checkbox" name="del[]" value=""></td>
+                            <td class="ta_r" data-label="Action:"><i class="material-icons">mode_edit</i><input type="checkbox" name="del[]" value=""></td>
                         </tr>
                         <tr id="slider_2">
                             <td data-label="ID">2</td>
                             <td data-label="Photo">
                                 <img src="https://placeimg.com/80/80/any" width="80" height="80" style="border-radius: 100%;">
                             </td>
-                            <td data-label="Title"><a href="">Инженер по технической инвентаризации</a><a></a></td>
+                            <td data-label="Title"><a href="">Инженер по технической инвентаризации</a></td>
                             <td data-label="Type">Сертификат</td>
-                            <td class="ta_r" data-label="Action:"><input type="checkbox" name="del[]" value=""></td>
+                            <td class="ta_r" data-label="Action:"><i class="material-icons">mode_edit</i><input type="checkbox" name="del[]" value=""></td>
                         </tr>
                     </tbody>
                 </table>
@@ -325,7 +325,7 @@
                                 admin
                             </td>
                             <td data-label="User:" title="Admin Site">
-                                <a href="" onclick="Ajax.page(this.href); return false;">Admin Site</a>
+                                <a href="">Admin Site</a>
                             </td>
                             <td data-label="Email:" title="admin@cms.com">
                                 <a href="mailto:admin@cms.com">admin@cms.com</a>
@@ -337,14 +337,14 @@
                                 2018-03-15 14:55:14
                             </td>
                             <td class="ta_r" data-label="Action:">
-                                <input type="checkbox" name="del[]" value="" onchange="Checked.toggle.apply(this.parentNode.parentNode, [this.checked])">
+                                <input type="checkbox" name="del[]" value="">
                             </td>
                         </tr>
                         <tr id="user_4">
                             <td data-label="ID:">4</td>
                             <td data-label="Login:" title="Dmitry">Dmitry</td>
                             <td data-label="User:" title="Dev Admin">
-                                <a href="" onclick="Ajax.page(this.href); return false;">Dev Admin</a>
+                                <a href="">Dev Admin</a>
                             </td>
                             <td data-label="Email:" title="dev@dev.ru">
                                 <a href="mailto:dev@dev.ru">dev@dev.ru</a>
@@ -356,7 +356,7 @@
                                 2018-03-23 17:47:33
                             </td>
                             <td class="ta_r" data-label="Action:">
-                                <input type="checkbox" name="del[]" value="4" onchange="Checked.toggle.apply(this.parentNode.parentNode, [this.checked])">
+                                <input type="checkbox" name="del[]" value="4">
                             </td>
                         </tr>
                         <tr id="user_5">
@@ -375,7 +375,7 @@
                                 2018-03-23 00:04:27
                             </td>
                             <td class="ta_r" data-label="Action:">
-                                <input type="checkbox" name="del[]" value="5" onchange="Checked.toggle.apply(this.parentNode.parentNode, [this.checked])">
+                                <input type="checkbox" name="del[]" value="5">
                             </td>
                         </tr>
                     </tbody>
