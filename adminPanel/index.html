@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="mainhead">
+            <a href="#" class="logo">ADMIN PANEL</a>
+            <nav class="menu" onclick="showAside()">
+                <i class="material-icons">reorder</i>
+            </nav>
+            <div class="flx-align">
+                <a href="" class="notification flx-align"><i class="material-icons">notifications</i></a>
+                <div class="user flx-align">
+                    <span>Some username</span>
+                    <div class="hideModal">
+                        <p>additional information</p>
+                        <p>
+                            <button class="waves btn">Редактировать</button>
+                            <button class="waves btn">Выход</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside>
+            <nav class="flx-col">
+                <a href=""><i class="material-icons" style="vertical-align: middle">dashboard</i> Панель</a>
+                <a href=""><i class="material-icons" style="vertical-align: middle">work</i> Услуги</a>
+                <a href=""><i class="material-icons" style="vertical-align: middle">view_carousel</i> Слайдер</a>
+                <a href=""><i class="material-icons" style="vertical-align: middle">group</i> Пользователи</a>
+                <a href=""><i class="material-icons" style="vertical-align: middle">settings</i> Настройки</a>
+            </nav>
+        </aside>
+        <main>
+            <!-- ********************* HIGHCHARTS SECTION ***************** -->
+            <section class="main-info">
+                <div class="main-filters">
+                    <button class="btn waves">Сегодня</button>
+                    <div class="main-info-filters">
+                        <div class="filter-orange">
+                            <p>Пользователи</p>
+                            <span>678</span>
+                        </div>
+                        <div class="filter-blue">
+                            <p>Сделки</p>
+                            <span>132</span>
+                        </div>
+                        <div class="filter-yel">
+                            <p>Средняя цена</p>
+                            <span>545</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="container"></div>
+            </section>
+            <div class="flex-container">
+                <section class="card-green-light">
+                    <i class="material-icons">euro_symbol</i>
+                    <div class="content">
+                        <div class="title">ОБЩАЯ СУМА ЗАКАЗОВ ЗА 24 ЧАСА</div>
+                        <span>4352</span>
+                    </div>
+                </section>
+                <section class="card-blue-light">
+                    <i class="material-icons">shopping_basket</i>
+                    <div class="content">
+                        <div class="title">ОБЩЕЕ КОЛИЧЕСТВО ЗАКАЗОВ</div>
+                        <span>24242</span>
+                    </div>
+                </section>
+                <section class="card-yellow-light">
+                    <i class="material-icons">people</i>
+                    <div class="content">
+                        <div class="title">ПОЛЬЗОВАТЕЛИ</div>
+                        <span>25252</span>
+                    </div>
+                </section>
+            </div>
+            <!-- ****************** SERVICE SECTION ****************** -->
+            <section class="service">
+                <header>
+                    <h1 class="flx-just-center">
+            			Услуги
+            			<i class="material-icons ic_but red tt hide waves" data-title="Удалить">delete</i>
+            			<i class="material-icons ic_but tt waves" data-title="Добавить услугу">add_circle</i>
+            		</h1>
+                </header>
+                <div class="search">
+                    <input type="search" placeholder="⌕ поиск" onkeyup="Search($(this).val());">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Название услуги</th>
+                            <th class="ta_r"><input type="checkbox"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="search">
+                        <tr>
+                            <td data-label="ID">1</td>
+                            <td data-label="title"><a href="">Регистрация права собственности</a><a></a></td>
+                            <td class="ta_r"><a href=""><i class="material-icons">mode_edit</i></a>
+                                <a><input type="checkbox" name="del[]" value=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">3</td>
+                            <td data-label="title"><a href="">Оформление объектов самовольного и нового      строительства</a><a></a>
+                            </td>
+                            <td class="ta_r" data-label="Action:">
+                                <a href=""><i class="material-icons">mode_edit</i></a>
+                                <a><input type="checkbox" name="del[]" value=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">5</td>
+                            <td data-label="title"><a href="">Оформление разрешения на строительство</a><a></a></td>
+                            <td class="ta_r" data-label="Action:">
+                                <a href=""><i class="material-icons">mode_edit</i></a>
+                                <a><input type="checkbox" name="del[]" value=""></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <!-- ****************** / SERVICE SECTION ****************** -->
+            <!-- ADD SERVICE -->
+            <section>
+                <div class="tabs">
+                    <ul class="nav-tabs" data-id="service">
+                        <li class="" data-tab="sseo-ru">ru</li>
+                        <li data-tab="sseo-uk" class="active ">uk</li>
+                    </ul>
+                </div>
+                <header>
+                    <h1 class="flx-just-center">ДОБАВИТЬ УСЛУГУ</h1>
+                </header>
+                <div class="tab-holder">
+                    <div id="sseo-ru" class="tabcontent active" data-id="service">
+                        <div class="from-group">
+                            <label>Название услуги</label>
+                            <input type="text" name="" placeholder="Название услуги" value="" required="">
+                        </div>
+                        <div class="from-group">
+                            <label>Заголовок</label>
+                            <input type="text" name="" placeholder="Заголовок" value="">
+                        </div>
+                        <div class="from-group">
+                            <label>descr</label>
+                            <textarea type="text" name="" placeholder="descr" required=""></textarea>
+                        </div>
+                        <div class="from-group">
+                            <label>Ценовая политика по Киеву</label>
+                            <input type="text" name="" placeholder="Ценовая политика по Киеву" value="" required="">
+                        </div>
+                        <div class="from-group">
+                            <label>Ценовая политика по Области</label>
+                            <input type="text" name="" placeholder="Ценовая политика по Области" value="" required="">
+                        </div>
+                    </div>
+
+                    <div id="sseo-uk" class="tabcontent" data-id="service" style="display:none;">
+                        <div class="from-group">
+                            <label>Название услуги</label>
+                            <input type="text" name="" placeholder="Название услуги" value="">
+                        </div>
+                        <div class="from-group">
+                            <label>Заголовок</label>
+                            <input type="text" name="" placeholder="Заголовок" value="">
+                        </div>
+                        <div class="from-group">
+                            <label>descr</label>
+                            <textarea type="text" name="" placeholder="descr"></textarea>
+                        </div>
+                        <div class="from-group">
+                            <label>Ценовая политика по Киеву</label>
+                            <input type="text" name="" placeholder="Ценовая политика по Киеву" value="">
+                        </div>
+                        <div class="from-group">
+                            <label>Ценовая политика по Области</label>
+                            <input type="text" name="" placeholder="Ценовая политика по Области" value="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="from-group">
+                    <label>Url</label>
+                    <div class="pseudo--input">
+                        <span>https://dozwil.gdr.one/</span>
+                        <input type="text" name="url" placeholder="url" value="">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <button type="submit" class="waves btn">Сохранить</button>
+            </section>
+            <!-- / ADD SERVICE -->
+            <!-- ************************* SLIDER SECTION ************************************* -->
+            <section>
+                <header>
+                    <h1 class="flx-just-center">
+            			СЛАЙДЕР
+            			<i class="material-icons ic_but red tt hide waves" data-title="Удалить">delete</i>
+            			<i class="material-icons ic_but tt waves" data-title="Добавить услугу">add_circle</i>
+            		</h1>
+                </header>
+                <div class="search">
+                    <input type="search" placeholder="⌕ поиск" onkeyup="Search($(this).val());">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Слайдеры</th>
+                            <th>Тип</th>
+                            <th class="ta_r"><input type="checkbox" name="del[]"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="search">
+                        <tr id="slider_1">
+                            <td data-label="ID">1</td>
+                            <td data-label="Photo">
+                                <img src="https://placeimg.com/80/80/any" width="80" height="80" style="border-radius: 100%;">
+                            </td>
+                            <td data-label="Title"><a href="">Архитектор</a><a></a></td>
+                            <td data-label="Type">Сертификат</td>
+                            <td class="ta_r" data-label="Action:"><input type="checkbox" name="del[]" value=""></td>
+                        </tr>
+                        <tr id="slider_2">
+                            <td data-label="ID">2</td>
+                            <td data-label="Photo">
+                                <img src="https://placeimg.com/80/80/any" width="80" height="80" style="border-radius: 100%;">
+                            </td>
+                            <td data-label="Title"><a href="">Инженер по технической инвентаризации</a><a></a></td>
+                            <td data-label="Type">Сертификат</td>
+                            <td class="ta_r" data-label="Action:"><input type="checkbox" name="del[]" value=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <!-- ADD SLIDER -->
+            <section>
+                <div class="tabs">
+                    <ul class="nav-tabs" data-id="service">
+                        <li class="" data-tab="sseo-ru">ru</li>
+                        <li data-tab="sseo-uk" class="active ">uk</li>
+                    </ul>
+                </div>
+                <header>
+                    <h1 class="flx-just-center">ДОБАВИТЬ УСЛУГУ</h1>
+                </header>
+                <div class="tab-holder">
+                    <div id="sseo-ru" class="tabcontent active" data-id="service">
+                        <div class="from-group">
+                            <label>Название </label>
+                            <input type="text" name="" placeholder="Слайдеры" value="" required="">
+                        </div>
+                        <div class="from-group">
+                            <label>Команда</label>
+                            <div class="img-group">
+                                <div class="dragndrop">
+                                    <i class="material-icons">cloud_upload</i> Нажмите сюда или перетащите изображение
+                                </div>
+                            </div>
+                        </div>
+                        <div class="from-group">
+                            <label>Тип</label>
+                            <select class="form-control" name="type" required="">
+                				<option value="photo">Команда</option><option value="contacts">Контакты</option><option value="certificate">Сертификат</option>
+                			</select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <button type="submit" class="waves btn">Сохранить</button>
+            </section>
+            <!-- / SLIDER SECTION -->
+            <!-- *********************  USERS SECTION ********************************************* -->
+            <section>
+                <header>
+                    <h1 class="flx-just-center">
+            			ПОЛЬЗОВАТЕЛИ
+            			<i class="material-icons ic_but red tt hide waves" data-title="Удалить">delete</i>
+            			<i class="material-icons ic_but tt waves" data-title="Добавить услугу">add_circle</i>
+            		</h1>
+                </header>
+                <div class="search">
+                    <input type="search" placeholder="⌕ поиск" onkeyup="Search($(this).val());">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID:</th>
+                            <th>Логин</th>
+                            <th>Имя</th>
+                            <th>Email</th>
+                            <th>Дата регистрации</th>
+                            <th>Последний визит</th>
+                            <th class="ta_r">
+                                <input type="checkbox" name="del[]" onchange="Checked.all(this);">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="search">
+                        <tr id="user_1">
+                            <td data-label="ID:">1</td>
+                            <td data-label="Login:" title="admin">
+                                admin
+                            </td>
+                            <td data-label="User:" title="Admin Site">
+                                <a href="" onclick="Ajax.page(this.href); return false;">Admin Site</a>
+                            </td>
+                            <td data-label="Email:" title="admin@cms.com">
+                                <a href="mailto:admin@cms.com">admin@cms.com</a>
+                            </td>
+                            <td data-label="Reg date:" title="2018-03-15 14:55:14">
+                                2018-03-15 14:55:14
+                            </td>
+                            <td data-label="Last visit:" title="2018-03-15 14:55:14">
+                                2018-03-15 14:55:14
+                            </td>
+                            <td class="ta_r" data-label="Action:">
+                                <input type="checkbox" name="del[]" value="" onchange="Checked.toggle.apply(this.parentNode.parentNode, [this.checked])">
+                            </td>
+                        </tr>
+                        <tr id="user_4">
+                            <td data-label="ID:">4</td>
+                            <td data-label="Login:" title="Dmitry">Dmitry</td>
+                            <td data-label="User:" title="Dev Admin">
+                                <a href="" onclick="Ajax.page(this.href); return false;">Dev Admin</a>
+                            </td>
+                            <td data-label="Email:" title="dev@dev.ru">
+                                <a href="mailto:dev@dev.ru">dev@dev.ru</a>
+                            </td>
+                            <td data-label="Reg date:" title="2018-03-23 17:47:33">
+                                2018-03-23 17:47:33
+                            </td>
+                            <td data-label="Last visit:" title="2018-03-23 17:47:33">
+                                2018-03-23 17:47:33
+                            </td>
+                            <td class="ta_r" data-label="Action:">
+                                <input type="checkbox" name="del[]" value="4" onchange="Checked.toggle.apply(this.parentNode.parentNode, [this.checked])">
+                            </td>
+                        </tr>
+                        <tr id="user_5">
+                            <td data-label="ID:">5</td>
+                            <td data-label="Login:" title="Alex">Alex</td>
+                            <td data-label="User:" title="Alex ">
+                                <a href="" onclick="Ajax.page(this.href); return false;">Alex </a>
+                            </td>
+                            <td data-label="Email:" title="alex@gdr.one">
+                                <a href="mailto:alex@gdr.one">alex@gdr.one</a>
+                            </td>
+                            <td data-label="Reg date:" title="2018-03-23 00:04:27">
+                                2018-03-23 00:04:27
+                            </td>
+                            <td data-label="Last visit:" title="2018-03-23 00:04:27">
+                                2018-03-23 00:04:27
+                            </td>
+                            <td class="ta_r" data-label="Action:">
+                                <input type="checkbox" name="del[]" value="5" onchange="Checked.toggle.apply(this.parentNode.parentNode, [this.checked])">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <!-- ADD USERS -->
+            <section>
+                <header>
+                    <h1 class="flx-just-center">
+            			ДОБАВЛЕНИЕ ПОЛЬЗОВАТЕЛЯ
+            			<i class="material-icons ic_but red tt hide waves" data-title="Удалить">delete</i>
+            			<i class="material-icons ic_but tt waves" data-title="Добавить услугу">add_circle</i>
+            		</h1>
+                </header>
+                <div class="from-group">
+                    <label>Группа</label>
+                    <select class="form-control" name="group_id" required="">
+        				<option value="1">Администратор</option><option value="5">Пользователь</option>
+        			</select>
+                </div>
+                <div class="from-group">
+                    <label>Имя</label>
+                    <input type="text" name="first_name" placeholder="Имя" value="" required="">
+                </div>
+                <div class="from-group">
+                    <label>Фамилия</label>
+                    <input type="text" name="last_name" placeholder="Фамилия" value="" required="">
+                </div>
+                <div class="from-group">
+                    <label>Логин</label>
+                    <input type="text" name="login" placeholder="Логин" value="" required="">
+                </div>
+                <div class="from-group">
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="Email" value="" required="">
+                </div>
+                <div class="from-group">
+                    <label>Пароль</label>
+                    <input type="password" name="password" placeholder="Пароль">
+                </div>
+                <div class="from-group">
+                    <label>Повторите пароль</label>
+                    <input type="password" name="repassword" placeholder="Повторите пароль">
+                </div>
+            </section>
+            <section>
+                <button type="submit" class="waves btn">Сохранить</button>
+            </section>
+            <!-- ********************* / USERS SECTION ************************** -->
+            <!-- ********************* SETTINGS SECTION ************************ -->
+            <section>
+                <div class="tabs upper-tabs">
+                    <ul class="nav-tabs" data-id="service">
+                        <li class="active" data-tab="settings1">TAB 1</li>
+                        <li data-tab="about" class=" ">TAB 2</li>
+                        <li data-tab="command" class=" ">TAB 3</li>
+                        <li data-tab="contacts" class=" ">TAB 4</li>
+                    </ul>
+                </div>
+                <div class="tab-holder">
+                    <div id="settings1" class="tabcontent active" data-id="settings1">
+                        <div class="tabs sub-tabs">
+                            <ul class="nav-tabs" data-id="service">
+                                <li class="" data-tab="seo-ru">ru</li>
+                                <li data-tab="seo-uk" class="active ">uk</li>
+                            </ul>
+                        </div>
+                        <header>
+                            <h1 class="flx-just-center">TAB 1</h1>
+                        </header>
+                        <div class="tab-holder">
+                            <!-- sub tab holders -->
+
+                            <div class="from-group">
+                                <label>Настройки</label>
+                                <input type="text" name="address[ru][]" placeholder="Настройки" value="Настройки">
+                            </div>
+                            <div class="from-group">
+                                <label>Описание</label>
+                                <input type="text" name="schedule[ru][]" placeholder="Описание" value="Описание">
+                            </div>
+                            <div class="from-group">
+                                <label>Ключевые слова</label>
+                                <textarea type="text" name="keywords[ru]" placeholder="keywords">Ключевые слова </textarea>
+                            </div>
+                            <div class="from-group">
+                                <label>Телефон #1</label>
+                                <input type="text" name="phone[]" placeholder="phone" value="+38(044) 222 9 555">
+                            </div>
+                            <div class="from-group">
+                                <label>Email</label>
+                                <input type="text" name="email" placeholder="email" value="dozwil@gmail.com">
+                            </div>
+                            <div class="from-group">
+                                <label>Facebook</label>
+                                <div class="pseudo--input">
+                                    <span onclick="this.nextElementSibling.focus()">https://fb.me/</span>
+                                    <input type="text" name="fb" placeholder="url" value="dozwil.kiev.ua">
+                                </div>
+                            </div>
+                            <div class="from-group">
+                                <label>Путь к панели управления</label>
+                                <div class="pseudo--input">
+                                    <span onclick="this.nextElementSibling.focus()">https://dozwil.gdr.one/</span>
+                                    <input type="text" name="rcp" placeholder="path" value="apanel">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- / tab holder "tab 1" -->
+                    <!-- tab holder "tab 2" -->
+                    <div id="about" class="tabcontent" data-id="about">
+                        <div class="tabs sub-tabs">
+                            <ul class="nav-tabs" data-id="service">
+                                <li class="" data-tab="seo-ru">ru</li>
+                                <li data-tab="seo-uk" class="active ">uk</li>
+                            </ul>
+                        </div>
+                        <header>
+                            <h1 class="flx-just-center">TAB 2</h1>
+                        </header>
+                        <!-- sub tab holders -->
+                        <div class="tab-holder">
+                            <div id="about-1" data-id="about" class="tabcontent active"></div>
+                            <div id="about-2" data-id="about" class="tabcontent"></div>
+                        </div>
+
+
+                    </div>
+                    <!-- / tab holder "tab 2" -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        Highcharts.chart('container', {
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: 'Анализ сделок'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: [{
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+                ],
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                title: {
+                    text: 'Пользователи',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: 'Сделки',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 120,
+                verticalAlign: 'top',
+                y: 100,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+            },
+            series: [{
+                name: 'Сделки',
+                type: 'column',
+                yAxis: 1,
+                data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+                tooltip: {
+                    valueSuffix: ' mm'
+                }
+
+            }, {
+                name: 'Пользователи',
+                type: 'spline',
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+                tooltip: {
+                    valueSuffix: '°C'
+                }
+            }]
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
